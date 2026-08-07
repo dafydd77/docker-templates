@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+	<Name>SneakerNet</Name>
+	<Repository>ghcr.io/dafydd77/sneakernet:latest</Repository>
+	<Registry>https://github.com/dafydd77/SneakerNet</Registry>
+	<Network>host</Network>
+	<MyIP/>
+	<MyMAC/>
+	<Shell>bash</Shell>
+	<Privileged>true</Privileged>
+	<Support>There is no support URL</Support>
+	<Project>https://github.com/dafydd77/SneakerNet/</Project>
+	<ReadMe>https://github.com/dafydd77/SneakerNet/documentation</ReadMe>
+	<Overview>A Sneaker Network.</Overview>
+	<Category></Category>
+	<WebUI>http://[IP]:[PORT:32100]/</WebUI>
+	<TemplateURL>https://raw.githubusercontent.com/dafydd77/docker-templates/master/dafydd77/sneakernet.xml</TemplateURL>
+	<Icon>https://raw.githubusercontent.com/dafydd77/docker-templates/master/images/sneakernet-icon.svg</Icon>
+	<ExtraParams>--restart=always</ExtraParams>
+	<PostArgs/>
+	<CPUset/>
+	<DateInstalled>1785183720</DateInstalled>
+	<DonateText/>
+	<DonateLink/>
+	<Requires/>
+	<Config Name="Path: /config" Target="/config" Default="/mnt/user/appdata/sneakernet/" Mode="rw" Description="This is the container path to your configuration files, e.g. databases, configuration files, logs etc." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/sneakernet/</Config>
+	<Config Name="Path: /data" Target="/data" Default="/mnt/user/data" Mode="rw" Description="This is the container path to your files to sync." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/data</Config>
+	<Config Name="Path: /disks" Target="/disks" Default="/mnt/disks" Mode="rw" Description="This is the container path to the mount point for your disks." Type="Path" Display="always" Required="true" Mask="false">/mnt/disks</Config>
+	<Config Name="Variable: ENABLE_HEALTHCHECK" Target="ENABLE_HEALTHCHECK" Default="yes|no" Mode="{3}" Description="Enable or disable healthchecks." Type="Variable" Display="advanced" Required="false" Mask="false">yes</Config>
+	<Config Name="Variable: HEALTHCHECK_COMMAND" Target="HEALTHCHECK_COMMAND" Default="" Mode="{3}" Description="The command or script to execute, if not specified then the script healthcheck.sh will be used (process, dns and https checking)." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+	<Config Name="Variable: HEALTHCHECK_ACTION" Target="HEALTHCHECK_ACTION" Default="" Mode="{3}" Description="The action to execute if the healthcheck command returns a non zero exit code, if not specified the action will be 'exit 1', if you want the container to exit on failure then set the action to 'kill 1'." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+	<Config Name="Variable: HEALTHCHECK_HOSTNAME" Target="HEALTHCHECK_HOSTNAME" Default="google.com" Mode="{3}" Description="The hostname used when performing HTTPS and DNS healthchecking." Type="Variable" Display="advanced" Required="false" Mask="false">google.com</Config>
+	<Config Name="Variable: PUID" Target="PUID" Default="99" Mode="{3}" Description="User ID for the running container" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+	<Config Name="Variable: PGID" Target="PGID" Default="100" Mode="{3}" Description="Group ID for the running container" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+	<Config Name="Variable: UMASK" Target="UMASK" Default="000" Mode="{3}" Description="UMASK for the running container" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+	<TailscaleStateDir/>
+</Container>
