@@ -14,7 +14,7 @@
 	<Overview>A Sneaker Network.</Overview>
 	<Category></Category>
 	<WebUI>http://[IP]:[PORT:32100]/</WebUI>
-	<TemplateURL>https://raw.githubusercontent.com/dafydd77/docker-templates/master/dafydd77/sneakernet.xml</TemplateURL>
+	<TemplateURL>https://raw.githubusercontent.com/dafydd77/docker-templates/refs/heads/main/dafydd77/sneakernet.xml</TemplateURL>
 	<Icon>https://raw.githubusercontent.com/dafydd77/docker-templates/master/images/sneakernet-icon.svg</Icon>
 	<ExtraParams>--restart=always</ExtraParams>
 	<PostArgs/>
