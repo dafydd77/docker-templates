@@ -16,7 +16,7 @@
 	<WebUI>http://[IP]:[PORT:32100]/</WebUI>
 	<TemplateURL>https://raw.githubusercontent.com/dafydd77/docker-templates/refs/heads/main/dafydd77/sneakernet.xml</TemplateURL>
 	<Icon>https://raw.githubusercontent.com/dafydd77/docker-templates/master/images/sneakernet-icon.png</Icon>
-	<ExtraParams>--restart=always</ExtraParams>
+	<ExtraParams>--restart=always --user 99:100</ExtraParams>
 	<PostArgs/>
 	<CPUset/>
 	<DateInstalled>1785183720</DateInstalled>
